@@ -1,0 +1,60 @@
+/*公共的样式*/
+img{
+    //解决图片和块级元素之间有三像素的间隙
+    vertical-align: middle;
+}
+body{
+    background-color: #fff;
+}
+/*定义变量*/
+@main-color:#006699;
+#header{
+    z-index: 999;
+    height: 50px;
+    background-color: @main-color;
+    /*子代选择器  一般选择标签，选择器会使用子代选择器，避免找到后面的标签*/
+    >h4{
+      margin: 0;
+      color: #fff;
+      font-weight: normal;
+      line-height: 50px;
+      text-align: center;
+
+    }
+    .fa-search{
+        position: absolute;
+        right:20px;
+         top: 15px;
+         color: #fff;
+    }
+}
+//底部
+#footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: @main-color;
+    z-index: 999;
+    .mui-row{
+        >div{
+            >a{
+                color: #fff;
+                display: block;//变为快，更好点击
+                text-align: center;
+                padding-top: 10px;
+                //这里不能用line-height  ，这个只能让单行文本垂直居中
+                >span{
+                   display: block;
+                }
+            }
+        }
+    }
+}
+
+//main
+#main{
+    /*父元素与子元素之间用padding，而兄弟之间用margin*/
+    //padding-top: 50px;
+}

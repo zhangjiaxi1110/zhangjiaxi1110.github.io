@@ -1,0 +1,90 @@
+@import 'base.less';
+
+//导航条的样式
+#nav{
+    padding: 10px;
+    .mui-row{
+        >div{
+            >a{
+                display: block;
+                >img{
+                  width: 100%;
+                }
+            }
+        }
+    }
+}
+
+#banner{
+    padding: 0 10px;
+    .mui-row{
+        a{
+            display: block;
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
+// 品牌
+#brand-area{
+   padding:0 10px;
+   .brand-title{
+       display: block;
+       img{
+          width: 100%;
+       }
+   }
+   .mui-row{
+       a{
+           display: block;
+           img{
+               width: 100%;
+           }
+       }
+   }
+}
+
+// 运动
+#sport-area,#women-area,#man-area{
+ padding: 0 0 50px;
+    .brand-title{
+        display: block;
+        >img{
+            width: 100%;
+        }
+    }
+    .mui-row{
+        >div{
+            padding:5px; 
+            .product{
+                padding: 5px;
+                box-shadow: 0px 0px 5px #ccc;
+                text-align: center;
+                .product-img{
+                    display: block;
+                    img{
+                        width: 100%;
+                    }
+                }
+                .product-name{
+                    //给父元素家固定的高度，行高是父元素高度的一般，父元素高度范围内只能显示
+                    //2行，超出的部分隐藏
+                    height: 50px;
+                    line-height: 25px;
+                    overflow: hidden;
+                }
+                .product-price{
+                    font-size: 12px;
+                    .new-price{
+                        color: red;
+                    }
+                    .old-price{
+                        color: black;
+                    }
+                }
+                .product-img{}
+            }
+        }
+    }
+}
